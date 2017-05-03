@@ -1,8 +1,8 @@
 # secure-s3fs
-CSC4420: Operating Systems - Final Course Project
+CSC4420: Operating Systems - Final Course Project:
 Design and Implementation of A Secure Amazon S3 Based File System 
 
-This project is the design and implementation of a stackable file system running on Linux and using Amazon S3 as backend storage.  The source code contains a slightly altered version of s3fs-1.80, using OpenSSL's RC4.  It accomplishes the following:
+This project is the design and implementation of a stackable file system running on Linux and using Amazon S3 as backend storage.  The source code contains a slightly altered version of s3fs-1.80, using OpenSSL's RC4, implemented using C++.  It accomplishes the following:
 
 - When mounted, a bucket in S3 is created as a local directory on your Linux machine
 - Any updates in the mounted directory are reflected in the S3 bucket and vice versa
@@ -26,8 +26,18 @@ Enter the following onto the Ubuntu command line:
 ```
 sudo apt-get install automake autotools-dev g++ git libcurl4-gnutls-dev libfuse-dev libssl-dev libxml2-dev make pkg-config
 ```
+#### Third, download and install secure-s3fs
 
-(I will insert more here about installation once I upload to github, I won't describe the installation process here for my project submission as I already have all of the source code submitted along with this.  This would be the third step, so I will move onto the fourth step now)
+Enter the following onto the Ubuntu command line:
+
+```
+git clone https://github.com/lemonguy94/secure-s3fs
+cd secure-s3fs
+./autogen.sh
+./configure
+make
+
+```
 
 #### Fourth, mount your local directory
 
